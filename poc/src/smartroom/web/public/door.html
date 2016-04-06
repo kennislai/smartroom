@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="serverAddress" content="SERVERIP">
+	<title>SmartRoom Door Control</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<script src="lib/jquery/jquery-2.2.1.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="lib/socketio/socket.io.js"></script>
+	<script src="js/door.js"></script>
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row-door">
+				<a href="javascript:window.location.reload();"><div class="col-xs-12"><h1>Room 101</h1></div></a>
+		</div>
+		<div class="row-door">
+			<div class="col-xs-6">
+				<p>
+					<button id="dnd" type="button" class="btn btn-door btn-off disabled" value="READY">Do Not Disturb</button>
+				</p>
+				<p>
+					<button id="makeuproom" type="button" class="btn btn-door btn-off disabled" value="READY">Makeup Room</button>
+				</p>
+			</div>
+			<div class="col-xs-6">
+				<p>
+					<button id="laundry" type="button" class="btn btn-door btn-off disabled" value="READY">Laundry</button>
+				</p>
+				<p>
+					<button id="bell" type="button" class="btn btn-default btn-xs btn-door btn-off" value="READY">Bell</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

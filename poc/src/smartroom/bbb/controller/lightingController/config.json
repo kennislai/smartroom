@@ -1,0 +1,67 @@
+{
+  "server": "ws://192.168.0.3:3002",
+  "port": "3005",
+  "devices": [{
+    "type": "LIGHTING",
+    "name": "dimmerlight",
+    "pin": "P9_14"
+  }, {
+    "type": "LIGHT",
+    "name": "doghouselight",
+    "pin": "P9_12"
+  }],
+  "subscribe": ["LIGHTING", "MOTION", "VOICE"],
+  "rules": [{
+    "trigger": {
+      "type": "UPDATE_STATUS",
+      "deviceType": "MOTION_SENSOR_PIR",
+      "deviceName": "motionSensorPIR_1",
+      "value": 1
+    },
+    "command": {
+      "type": "COMMAND",
+      "deviceType": "LIGHT",
+      "deviceName": "doghouselight",
+      "value": 1
+    }
+  }, {
+    "trigger": {
+      "type": "UPDATE_STATUS",
+      "deviceType": "MOTION_SENSOR_PIR",
+      "deviceName": "motionSensorPIR_1",
+      "value": 0
+    },
+    "command": {
+      "type": "COMMAND",
+      "deviceType": "LIGHT",
+      "deviceName": "doghouselight",
+      "value": 0
+    }
+  }, {
+    "trigger": {
+      "type": "COMMAND",
+      "deviceType": "SPEAKUP_SENSOR",
+      "deviceName": "speakupSensor",
+      "value": "Turn On Light"
+    },
+    "command": {
+      "type": "COMMAND",
+      "deviceType": "LIGHT",
+      "deviceName": "doghouselight",
+      "value": 1
+    }
+  }, {
+    "trigger": {
+      "type": "COMMAND",
+      "deviceType": "SPEAKUP_SENSOR",
+      "deviceName": "speakupSensor",
+      "value": "Turn Off Light"
+    },
+    "command": {
+      "type": "COMMAND",
+      "deviceType": "LIGHT",
+      "deviceName": "doghouselight",
+      "value": 0
+    }
+  }]
+}

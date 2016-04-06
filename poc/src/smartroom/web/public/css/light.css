@@ -1,0 +1,29 @@
+/*---------------   Lighting  --------------*/
+[data-role='lighting']::after, [data-role='lighting']:hover span br::after {content:attr(data-desc);}
+[data-role='lighting'].active img.flip {content:url('../img/light_on128_1.png'); }
+
+[data-role='lighting'].active:hover {background-color: #f0ad4e !important;}
+[data-role='lighting'].active:hover img.flip { content:url('../img/light_off128.png'); }
+
+[data-role='lighting']:not(.active) img.flip,
+[data-role='lighting'][data-init='off']:not(.active) img.flip {content:url('../img/light_off128.png');}
+
+[data-role='lighting']:not(.active):hover img.flip,
+[data-role='lighting'][data-init='off']:not(.active):hover img.flip {content:url('../img/light_on128.png'); }
+
+.slider-handle {background: #73e600 /*#66cc00*/}
+.slider-selection {background: palegreen;}
+.slider-holder {border: #000 5px solid }
+/*.bootstrap-switch-handle-on, .bootstrap-switch-handle-success{height: 20px !important; line-height: 13px} *//* not working */
+
+#lights h1, h1.title {text-align: left; padding: 10px;text-transform: uppercase;}
+#lights h1 img.icon {vertical-align:middle; margin:0}
+.light ul, .light ul li {color:#000;}
+.hide {visibility:hidden;}
+
+.w450 {width:480px;border-bottom:#aaa 1px inset;margin:auto;font-size:14px;}
+.w100 {width:100%;border:#aaa 1px solid}
+.l_c_off  {color:#aaa}
+.l_c_on   {color:#66ff66}
+.l.r      {text-align:right}
+/*------------  End of Lighting  -----------*/

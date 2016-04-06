@@ -1,0 +1,19 @@
+{
+	"server": "ws://192.168.0.3:3002",
+	"port": "3006",
+	"type": "COURTESY",
+	"devices": [{
+		"name": "dnd",
+		"pin": "P9_18"
+	},{
+		"name": "makeuproom",
+		"pin": "P9_17"
+	},{
+		"name": "laundry",
+		"pin": ""
+	},{
+		"name": "bell",
+		"pin": "P8_13"
+	}],
+	"subscribe": ["COURTESY"]
+}

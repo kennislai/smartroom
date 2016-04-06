@@ -1,0 +1,15 @@
+.slider-handle {background: #73e600 /*#66cc00*/}
+.slider-selection {background: palegreen;}
+.slider-holder {border: #000 5px solid }
+/*.bootstrap-switch-handle-on, .bootstrap-switch-handle-success{height: 20px !important; line-height: 13px} *//* not working */
+
+#hvac h1, h1.title {text-align: left; padding: 10px;text-transform: uppercase;}
+#hvac h1 img.icon {vertical-align:middle; margin:0}
+.light ul, .light ul li {color:#000;}
+.hide {visibility:hidden;}
+
+.w450 {width:480px;border-bottom:#aaa 1px inset;margin:auto;font-size:14px;}
+.w100 {width:100%;border:#aaa 1px solid}
+.l_c_off  {color:#aaa}
+.l_c_on   {color:#66ff66}
+.l.r      {text-align:right}

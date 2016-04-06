@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<head>
+<title>Curtain | Shade | Blind</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="Keywords" content="IRM SmartRoom">
+<meta name="Description" content="SmartRoom Swipe Panel">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="application-name" content="SmartRoom">
+<meta name="msapplication-TileColor" content="#006699">
+<meta http-equiv="imagetoolbar" content="no">
+
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="css/googleapis_font-openSans_400,700.css">
+<link type="text/css" rel="stylesheet" href="css/btn.css">
+<link type="text/css" rel="stylesheet" href="css/flex4.css">
+<link type="text/css" rel="stylesheet" href="css/aligner.css">
+<link type="text/css" rel="stylesheet" href="css/curtain1.css">
+<style>
+
+
+</style>
+
+</head>
+
+<html>
+<body>
+<!------------------ Curtain | Blind | Shade ------------------>
+
+<div class="center">
+<div class="curtain" class="" style="">
+   <h1 class="title"><img src="img/curtain128.png" alt="curtain" title="">Curtain</h1><hr>
+
+   <div class="flex4-row irm-curtain">
+      <div class="btn btn-default irm-btn-curtain"
+           data-role="curtain" data-fn="stopAll" aria-label="Curtain">
+        <span class="btn-big-text" style="padding:15px 0 0 0">Stop</span>
+      </div>
+   </div>
+
+    <div class="flex4-row irm-curtain">
+
+      <div class="btn btn-default irm-btn-curtain-close" data-fn="close"
+           data-role="curtain"  aria-label="Curtain">
+        <img src="img/curtain_c32.png" alt="curtain close" title="curtain close">
+        <div> Close </div>
+        <div class="flex4-row">
+          <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left" ></i>
+        </div>
+      </div>
+
+      <div class="btn btn-default irm-btn-curtain-open" data-fn="open"
+           data-role="curtain" aria-label="Curtain">
+        <img src="img/curtain_o32.png" alt="curtain close" title="curtain open">
+        <div> Open </div>
+        <div class="flex4-column">
+          <i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right" ></i>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div> <!-- end of "center" block -->
+
+
+<!------------------------------- End of Curtain --------------------------------->
+<script type="text/javascript" src="lib/socketio/socket.io.js"></script>
+<script type="text/javascript" src="js/curtain.js"></script>
+
+<script type="text/javascript">
+
+
+</script>
+
+
+</body>
+</html>

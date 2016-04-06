@@ -1,0 +1,176 @@
+html {
+	cursor: none !important;
+}
+
+body {
+	background-color: #000000;
+}
+
+h1 {
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.btn {
+	color: #FFFFFF;
+	white-space: normal;
+}
+
+.btn-on, .btn-on:focus, .btn-on:hover {
+	background-color: #FF0000;
+	color: #FFFFFF;
+}
+
+.btn-off, .btn-off:focus, .btn-off:hover {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.btn-door{
+	width: 180px;
+	height: 50px;
+}
+
+.btn-lighting {
+	width: 120px;
+	height: 120px;
+}
+
+.td-padding { 
+	padding: 5px;
+}
+
+.btn-adjustment {
+	width: 55px;
+	height: 55px;
+}
+
+.btn-door-tablet {
+	width: 65px;
+	height: 65px;
+}
+
+.time {
+	font-size: 56px;
+	color: #FFFFFF;
+}
+
+.date {
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.currentTemp {
+	font-size: 32px;
+	color: #FFFFFF;
+}
+
+.dayHighLow {
+	font-size: 16px;
+	color: #FFFFFF;	
+	text-align: right;
+}
+
+.roomTempHum {
+	font-size: 16px;
+	color: #FFFFFF;	
+	text-align: right;
+}
+
+.tv {
+	font-size: 11px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.btn-tv {
+	width: 60px;
+	height: 68px;
+}
+
+.btn-tv-mute {
+	width: 60px;
+	height: 48px;
+}
+
+.btn-tv-adjustment {
+	width: 48px;
+	height: 48px;
+}
+
+.btn-ac {
+	width: 85px;
+	height: 48px;
+}
+
+.btn-ac-adjustment {
+	width: 48px;
+	height: 48px;
+}
+
+
+.progress {
+	height: 10px;
+	border-radius: 0;
+}
+
+.btn-bathroom {
+	width: 175px;
+	height: 55px;
+}
+
+.btn-curtain {
+	width: 65px;
+	height: 55px;
+}
+
+.curtain {
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.row-door {
+	height: 80px;
+}
+
+.nav-pills > li > a {
+	color: white;
+}
+
+.nav-pills > li > a:hover {
+	color: white;
+	background-color: #C0C0C0;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	width: 342px;
+    height: 288px;
+	margin: auto;
+}
+
+
+
+.modal-dialog {
+	width: 70%;
+}
+
+.modal-header {
+	color: #FFFFFF;
+	border-bottom-color: #000000;
+}
+
+.modal-content {
+	border-color: #FFFFFF;
+	background-color: #000000;
+}
+
+.modal-body {
+	color: #FFFFFF;
+}
+
+.close {
+    color: #FFFFFF; 
+    opacity: 1;
+}

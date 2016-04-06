@@ -1,0 +1,5 @@
+{
+	"up_pin": "P9_23",
+	"dn_pin": "P9_25",
+	"simulate": false
+}

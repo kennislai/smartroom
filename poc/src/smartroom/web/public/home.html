@@ -1,0 +1,107 @@
+<!DOCTYPE html>  
+<head>
+	<title>Home</title>
+	<!--<meta name="serverAddress" content="SERVERIP">-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="Keywords" content="IRM SmartRoom">
+	<meta name="Description" content="SmartRoom Swipe Panel">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="application-name" content="SmartRoom">
+	<meta name="msapplication-TileColor" content="#006699">
+	<meta http-equiv="imagetoolbar" content="no">
+
+	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-switch.min.css">
+	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/slider.css">
+	<link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="css/googleapis_font-openSans_400,700.css">
+	<link type="text/css" rel="stylesheet" href="css/w_tp.css">
+	<link type="text/css" rel="stylesheet" href="css/swipe4.css">
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<link type="text/css" rel="stylesheet" href="css/btn.css">
+	<link type="text/css" rel="stylesheet" href="css/flex3.css">
+
+	<style type="text/css">
+		#irmHolder .col{position:absolute;top:0;right:10px;text-align:left;}
+		#irmHolder .col_header {font:700 40px/40px 'Open Sans', arial, sans-serif; color:#878 !important; }
+		#irmHolder .col_subtitle { font:300 30px/30px 'Open Sans', arial, sans-serif; color:#878 !important; }
+		#irmHolder .col_subject {padding:10px 0px;font:300 20px 'Open Sans', arial, sans-serif !important;line-height:25px;color:#000;}
+	</style>
+</head>
+
+<body>
+	<div id="irmHolder">
+		<div class="irm-panel animate" style="z-index: 8;">
+			<div class="irm-panel-content">
+
+				<div class="irm-panel-image"></div>
+				<div class="irm-whiteoverlay"></div>
+				<div class="irm-content-bot">    
+
+					<!------------------- Weather info  ---------------------->
+
+					<div id="w_info" class="w_info">
+						<div id="h_info">
+							<h1 id="h_name">Studio City</h1>
+							<h2 id="h_loc">Macau</h2>
+						</div>
+						<div id="today" class="w_date"></div>
+
+						<div class="w_flex_container">
+							<div class="w_flex_item w_center_item">
+								<img id="w_icon" class="w_icon">
+							</div>
+							<div id="w_flex_item">
+								<div class="w_tp_highlight">
+									<span class="" id="w_current_temp_fahrenheit" style="display:none"></span>
+									<span class="" id="w_current_temp_celsius" style="display:inline"></span>
+								</div>
+							</div>  
+							<div id="w_flex_item">
+								<div class="w_tp_super">
+									<span class="" style="display:none" aria-label="&#176;Fahrenheit">&#176;F</span>
+									<span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span>
+								</div>
+							</div>
+
+							<div class="w_flex_item w_tp_textbox">
+								<div>Room Temperature: <span id="w_room_temperature"></span><span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span></div>
+								<div>Room Humidity: <span id="w_room_humidity"></span>%</div>
+								<div>Day High: <span id="w_dayhigh"></span><span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span></div>
+								<div>Day Low: <span id="w_daylow"></span><span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span></div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------- end of Weather block (left)  ------------------- -->
+					<div class="col">
+						<p class="col_header"><span id="w_roomnumber"></span></p>
+						<p class="col_subtitle">Welcome</p>
+						<p class="col_subtitle"><span id="w_guestname"></span></p>
+					</div>
+					<!--------------------- end of Weather block (right) ------------------- -->
+
+				</div> 
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="lib/jquery/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap-switch.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap-slider.js"></script>
+	<script type="text/javascript" src="lib/socketio/socket.io.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			date_time();
+		});
+	</script>
+</body>
+</html>

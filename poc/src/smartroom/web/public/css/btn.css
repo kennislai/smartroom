@@ -1,0 +1,51 @@
+.btn {border-radius: 15px;outline: none;}
+.btn-on:target,.btn-on:focus,.btn-on:active,.btn-on.active{background-color:palegreen !important;outline: none !important;color:#000 !important;-webkit-box-shadow: 0 5px #27496d;-moz-box-shadow: 0 5px #27496d;box-shadow: 0 5px #27496d;} 
+.btn-off:target,.btn-off:focus,.btn-off:active,.btn-off.active{!important;outline: none !important;color:#000 !important;-webkit-box-shadow: 0 5px #27496d;-moz-box-shadow: 0 5px #27496d;box-shadow: 0 5px #27496d;} 
+
+.btn:not(.btn-small):hover,.btn:not(.btn-small):target,.btn:not(.btn-small):focus{transform: translateY(5px);-webkit-box-shadow: -5px -5px 65px 2px #122b40 inset;-moz-box-shadow: -5px -5px 65px 2px #122b40 inset; box-shadow: -5px -5px 65px 2px #122b40 inset;}
+.irm-btn-base-shadow {-webkit-box-shadow: 0 5px #27496d;-moz-box-shadow: 0 5px #27496d;box-shadow: 0 5px #27496d;}
+
+.irm-btn-sizeNbase-shadow {-webkit-box-shadow: 0px 5px 5px #27496d;-moz-box-shadow: 0px 5px 5px #27496d;box-shadow: 0px 5px 3px #27496d;}
+
+label.fa {margin-bottom: 0;}
+
+.irm-bg-darkblue {background-color: #286090 }
+.irm-btn-170 {width:170px; height:170px;}
+.irm-btn-100 {width:150px;height:60px}
+.irm-btn-top {width: 150px; height:50px;}
+
+
+h1.title {text-align: left; padding: 10px;text-transform: uppercase;}
+h1 span.title {text-transform: uppercase; font-size:36px;display: inner-block; position: relative;bottom: 32px;padding: 10px;}
+
+.btn .margin_t50p {margin-top:50%}
+
+
+.e{
+   -moz-box-shadow:    inset 0 0 10px #062;
+   -webkit-box-shadow: inset 0 0 10px #062;
+   box-shadow:         inset 0 0 10px #062;
+}
+
+.shadow {
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+/*
+.irm-2btn-container-wider> .btn[data-role='tv']:hover {
+  box-shadow:none;
+}
+*/
+div span.irm-btn-large {font-size:32px}
+
+.irm-baseline {position:relative; bottom: 0px}
+.irm-btn-shadow {-webkit-box-shadow: 3px 6px 61px 4px rgba(0,0,0,0.61);-moz-box-shadow: 3px 6px 61px 4px rgba(0,0,0,0.61);box-shadow: 3px 6px 61px 4px rgba(0,0,0,0.61);}
+
+.space {padding:40px;}
+
+.fa-2 { font-size: 2em;}
+.fa-2-5 { font-size: 2.5em;}
+.fa-3 { font-size: 4em;}
+.fa-4 { font-size: 8em; }
+.fa-5 { font-size: 12em; }

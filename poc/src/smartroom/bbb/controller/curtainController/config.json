@@ -1,0 +1,4 @@
+{
+  "server": "ws://192.168.0.3:3002",
+  "subscribe": ["CURTAIN"]
+}

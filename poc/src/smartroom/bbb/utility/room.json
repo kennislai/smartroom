@@ -1,0 +1,194 @@
+{
+    "_id": "101",
+    "room": "101",
+    "state": "CHECKOUT",
+    "temperature": 22,
+    "humidity": 60,
+    "courtesies": [
+        {
+            "service": "dnd",
+            "state": "READY",
+            "activeDate": ""
+        },
+        {
+            "service": "makeuproom",
+            "state": "READY",
+            "activeDate": ""
+        },
+        {
+            "service": "laundry",
+            "state": "INACTIVE",
+            "activeDate": ""
+        },
+        {
+            "service": "bell",
+            "state": "READY"
+        }
+    ],
+    "lighting": [
+        {
+            "type": "dimmerlight",
+            "dimmable": "true",
+            "state": "READY",
+            "power": "OFF",
+            "dimming": 5
+        },
+        {
+            "type": "doghouselight",
+            "dimmable": "false",
+            "state": "READY",
+            "power": "OFF",
+            "dimming": "1"
+        }
+    ],
+    "hvac": {
+        "state": "READY",
+        "mode": "OFF",
+        "fanspeed": "MID",
+        "temperature": {
+            "ac": 23,
+            "heater": 25
+        },
+        "power": {
+            "ac": 0,
+            "heater": 0
+        }
+    },
+    "tv": {
+        "state": "READY"
+    },
+    "curtain": {
+        "state": "READY",
+        "mode": "OPEN"
+    },
+    "selfservice": [
+        {
+            "service": "checkout",
+            "state": "DISABLED"
+        },
+        {
+            "service": "roomservice",
+            "state": "READY"
+        },
+        {
+            "service": "teatime",
+            "state": "READY"
+        },
+        {
+            "service": "wakeupcall",
+            "state": "READY"
+        }
+    ],
+    "scene_ids": [
+        "56e90a5bea88aec41c3f060f",
+        "56e90d2b745ff86817e99ac1",
+        "56e90d008a1d078c1d1dab42"
+    ],
+    "scenes": [
+        {
+            "_id": "56e90a5bea88aec41c3f060f",
+            "name": "CHECK IN",
+            "backEndOnly": true,
+            "hvac": {
+                "state": "READY",
+                "mode": "AIRCON",
+                "fanspeed": "MID",
+                "temperature": {
+                    "ac": "19",
+                    "heater": "25"
+                }
+            },
+            "curtain": {
+                "state": "READY",
+                "mode": "OPEN"
+            },
+            "state": "READY",
+            "lighting": [
+                {
+                    "type": "dimmerlight",
+                    "dimmable": "true",
+                    "state": "READY",
+                    "power": "ON",
+                    "dimming": "10"
+                },
+                {
+                    "type": "doghouselight",
+                    "dimmable": "false",
+                    "state": "READY",
+                    "power": "ON",
+                    "dimming": "1"
+                }
+            ]
+        },
+        {
+            "_id": "56e90d008a1d078c1d1dab42",
+            "name": "CHECK OUT",
+            "backEndOnly": true,
+            "hvac": {
+                "state": "READY",
+                "mode": "OFF",
+                "fanspeed": "MID",
+                "temperature": {
+                    "ac": "18",
+                    "heater": "25"
+                }
+            },
+            "curtain": {
+                "state": "READY",
+                "mode": "CLOSE"
+            },
+            "state": "READY",
+            "lighting": [
+                {
+                    "type": "dimmerlight",
+                    "dimmable": "true",
+                    "state": "READY",
+                    "power": "OFF",
+                    "dimming": "5"
+                },
+                {
+                    "type": "doghouselight",
+                    "dimmable": "false",
+                    "state": "READY",
+                    "power": "OFF",
+                    "dimming": "1"
+                }
+            ]
+        },
+        {
+            "_id": "56e90d2b745ff86817e99ac1",
+            "name": "MOVIE",
+            "backEndOnly": false,
+            "hvac": {
+                "state": "READY",
+                "mode": "AIRCON",
+                "fanspeed": "MID",
+                "temperature": {
+                    "ac": "20",
+                    "heater": "26"
+                }
+            },
+            "curtain": {
+                "state": "READY",
+                "mode": "CLOSE"
+            },
+            "state": "READY",
+            "lighting": [
+                {
+                    "type": "dimmerlight",
+                    "dimmable": "true",
+                    "state": "READY",
+                    "power": "ON",
+                    "dimming": "3"
+                },
+                {
+                    "type": "doghouselight",
+                    "dimmable": "false",
+                    "state": "READY",
+                    "power": "OFF",
+                    "dimming": "1"
+                }
+            ]
+        }
+    ]
+}

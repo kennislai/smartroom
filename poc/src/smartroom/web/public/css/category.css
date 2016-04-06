@@ -1,0 +1,7 @@
+.categories, .self-service {max-width:578px; height:auto;margin:auto;padding:5px}
+.categories ul, .categories li {list-style: none; display: inner-block}
+.categories .btn { margin-bottom: 15px }
+.categories li span:last-child{font-size:3em; display:inline-block;padding-top:25px}
+.categories div {display:table-cell}
+.categories img, .self-service img {max-width:100%;height:auto;}
+.self-service h3 {text-align: left; text-transform: uppercase;}

@@ -1,0 +1,36 @@
+{
+  "applicationServer": "ws://192.168.0.7:8088",
+  "port": "3002",
+  "room": "101",
+  "channels": [{
+    "deviceType": "HVAC",
+    "channel": "HVAC"
+  }, {
+    "deviceType": "TEMPERATURE_SENSOR",
+    "channel": "TEMPERATURE"
+  }, {
+    "deviceType": "HUMIDITY_SENSOR",
+    "channel": "HUMIDITY"
+  }, {
+    "deviceType": "MOTION_SENSOR_PIR",
+    "channel": "MOTION"
+  }, {
+    "deviceType": "SPEAKUP_SENSOR",
+    "channel": "VOICE"
+  }, {
+    "deviceType": "COURTESY",
+    "channel": "COURTESY"
+  }, {
+    "deviceType": "LIGHTING",
+    "channel": "LIGHTING"
+  }, {
+    "deviceType": "LIGHT",
+    "channel": "LIGHTING"
+  }, {
+    "deviceType": "IR_REMOTE",
+    "channel": "REMOTE"
+  }, {
+    "deviceType": "CURTAIN",
+    "channel": "CURTAIN"
+  }]
+}

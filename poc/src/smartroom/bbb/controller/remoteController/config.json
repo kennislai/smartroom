@@ -1,0 +1,87 @@
+{
+	"server": "ws://192.168.0.3:3002",
+	"port": "3007",
+	"devices": [{
+		"type": "IR_REMOTE",
+		"name": "remoteTVLG",
+		"pin": "P8_19",
+		"brand": "LG"
+	}, {
+		"type": "IR_REMOTE",
+		"name": "remoteTVBox",
+		"pin": "P8_19",
+		"brand": "Hybroad"
+	}, {
+		"type": "IR_REMOTE",
+		"name": "remoteTVSamsung",
+		"pin": "P8_19",
+		"brand": "Samsung"
+	}],
+
+	"subscribe": ["REMOTE"],
+
+	"protocol": {
+		"NEC_LG": {
+			"HDR_MARK": 9000,
+			"HDR_SPACE": 4500,
+			"BIT_MARK": 560,
+			"ONE_SPACE": 1680,
+			"ZERO_SPACE": 560,
+			"ADJ": 210
+		},
+		"NEC_TVBOX": {
+			"HDR_MARK": 9000,
+			"HDR_SPACE": 4500,
+			"BIT_MARK": 560,
+			"ONE_SPACE": 1680,
+			"ZERO_SPACE": 560,
+			"ADJ": 150
+		},
+		"Samsung": {
+			"HDR_MARK": 4500,
+			"HDR_SPACE": 4500,
+			"BIT_MARK": 560,
+			"ONE_SPACE": 1680,
+			"ZERO_SPACE": 560,
+			"ADJ": 300
+		}
+	},
+
+	"commandSet": {
+		"IR_REMOTE": {
+			"LG": {
+				"protocol": "NEC_LG",
+				"Power": "20DF10EF",
+				"VolumeUp": "20DF40BF",
+				"VolumeDown": "20DFC03F",
+				"ChannelUp": "20DF00FF",
+				"ChannelDown": "20DF807F",
+				"Mute": "20DF906F"
+			},
+			"Hybroad": {
+				"protocol": "NEC_TVBOX",
+				"ChannelUp": "807F9867",
+				"ChannelDown": "807FB847",
+				"Left": "807F1AE5",
+				"Right": "807F5AA5",
+				"1": "807F807F",
+				"2": "807F40BF",
+				"3": "807FC03F",
+				"4": "807F20DF",
+				"5": "807FA05F",
+				"6": "807F609F",
+				"7": "807FE01F",
+				"8": "807F10EF",
+				"9": "807F906F",
+				"0": "807F00FF"
+			},
+			"Samsung": {
+				"protocol": "Samsung",
+				"Power": "E0E040BF",
+				"VolumeUp": "E0E0E01F",
+				"VolumeDown": "E0E0D02F",
+				"Mute": "E0E0F00F"
+			}
+		}
+	}
+}

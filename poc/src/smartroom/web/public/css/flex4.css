@@ -1,0 +1,44 @@
+.flex4-row {
+    margin: auto;
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+[flex-role="container"] { 
+/*    box-shadow: inset 0 0 0 7px rgba(255,255,255,.5); */
+    padding: 30px;  
+    border: 5px #ccc ridge;
+}
+
+.flex4-column {
+    flex: 0 1 100%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: flex-start;    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    justify-content: space-between;  
+}
+
+.flex4-item {
+    display:flex;
+    flex: 0 1 auto;
+    margin: 0px;    
+   flex-direction: column; 
+}
+
+
+/*
+.three-col {
+   -webkit-column-count: 3;
+   -moz-column-count: 3;   
+   column-count: 3;
+   margin: 5px;
+}
+*/

@@ -1,0 +1,90 @@
+html {padding:0; margin:0; background:#fff; width:100%; height:100%;}
+body {padding:0; margin:0; background:#000 !important; width:100%; height:100vh;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: flex;-webkit-flex-direction: column;-moz-flex-direction: column;-ms-flex-direction: column;flex-direction: column;}
+
+#wrapper {width:100%;}
+header, #irm-topbar {text-align:right;background-image: linear-gradient(to bottom,#FE9A2E 5%,#FCFCFC);border-bottom:5px #555 outset;border-top:15px #e89e4 inset;-webkit-box-shadow:0 0 20px rgba(231,166,26,0.6);-moz-box-shadow:0 0 20px rgba(231,166,26,0.6);box-shadow:0 0 20px rgba(231,166,26,0.6);}
+footer, #irm-footbar {text-align:center;background-image: linear-gradient(to top, #000 70%, #555);box-shadow:0 0 10px rgba(0,0,0,0.6);}
+header, footer, #irm-topbar, #irm-footbar {width:100%;height:10vh;width:100%;height:52px;line-height:52px;overflow:hidden;}
+header ul, footer ul, #irm-topbar ul , #irm-footbar ul{list-style:none; padding:0px 10px 0px;}
+header ul li, footer ul li, #irm-topbar ul  li , #irm-footbar ul  li {margin: 0 5px 0;}
+
+header .top {text-align:left;}
+header .top button img {max-width:100%; height:auto;position: relative; display: inline}
+header .top button span {display: inline}
+
+header, footer {height:52px;padding:0;margin:0;-webkit-flex: 0 0 52px;-moz-flex: 0 0 52px;-ms-flex: 0 0 52px;flex: 0 0 52;}
+section {background:#eee;-webkit-flex: 1 0 auto;-moz-flex: 1 0 auto;-ms-flex: 1 0 auto;flex: 1 0 auto;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: flex;-webkit-flex-direction: row;-moz-flex-direction: row;-ms-flex-direction: row;flex-direction: row;}
+article {background:#bbb;-webkit-flex: 1;-moz-flex: 1;-ms-flex: 1;flex: 1;order:1;}
+
+#slides {width:100%; position:relative; /*overflow:hidden;*/box-shadow:0 0 20px rgba(0,0,0,0.6) }
+
+#irmHolder {display:block;width:100%; height:100%;  position:absolute; left:0; top:0; overflow:hidden;  background-size:cover; touch-action: pan-y;}
+/*.irm-panel {background-image:url(../img/bgblue.jpg);} */
+.irm-panel {background-color:#fff;}
+.irm-panel1 {background-color:#fff}
+#irmHolder .irm-panel,#irmHolder .irm-panel1 {display:block; width:100%; height:100%; position:absolute; left:0; top:0; transform:scale(0.6); opacity:0; text-align:center; /*cursor:ew-resize;*/}
+#irmHolder .irm-panel:first-child, #irmHolder .irm-panel1:first-child {transform:scale(1); opacity:1}
+/*#irmHolder .irm-panel-content .irm-panel-inner {display:block; width:100%; position:absolute; bottom:40px; left:0;}*/
+#irmHolder .animate, #irmHolder:first-child {transition:0.75s; -webkit-transition:0.75s;}
+
+.irm-panel-content {height:100%;margin-top:52px;}
+.irm-panel-image {height:100%;width:100%;-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;background:url(../img/studio_city.jpg) no-repeat top center;}
+.irm-whiteoverlay {background:transparent url(white.png) repeat-x bottom right;-webkit-background-size:contain;-moz-background-size:contain;background-size:contain;width:100%;height:80%;position:absolute;bottom:0px;left:0px;; text-align:center;}
+.irm-panel-inner, .irm-content-bot {position:absolute;bottom:0px;padding-bottom:40px;width:100%; text-align:center;}
+
+#slides #bullets {width:100%; height:19px; position:absolute; left:0; bottom:10px; z-index:100; text-align:center;}
+#slides #bullets span {display:inline-block; vertical-align:top; width:18px; height:18px; background:#fff; transition:0.5s; -webkit-transition:0.5s; border-radius:24px; padding:0; margin:0 3px; border:1px solid #000; cursor:pointer;}
+#slides #bullets span.current {background:#000; cursor:default;}
+#slides .one {width:95vmin; display:inline-block;}
+#slides .three {width:20%; margin:2%; display:inline-block; background:#fff;}
+#slides .four {width:25%; margin:1% 6%; display:inline-block;}
+#slides .five {width:15%; margin:2%; display:inline-block;}
+#slides .link {cursor:pointer;}
+#slides img.icon {display:inline-block; vertical-align:bottom; margin:20px 75px;}
+#slides h3 {padding:0; margin:0; font:700 30px/45px 'Open Sans', arial, sans-serif; color:#fc9;}
+#slides h1 {padding:0; margin:0; font:700 60px/70px 'Open Sans', arial, sans-serif; color:#d9d9d9}
+#slides p {padding:0; margin:0; font:400 20px/40px 'Open Sans', arial, sans-serif; color:#d9d9d9}
+#slides p span {text-decoration:underline;}
+
+#information {color:#000; width:95%; max-width:768px; margin:30px auto;}
+#information h1 {padding:0; margin:0; font:700 40px/70px 'Open Sans', arial, sans-serif; color:#333; text-align:center;}
+#information p {padding:10px 0; margin:0; font:400 18px/25px 'Open Sans', arial, sans-serif; color:#456;}
+
+@media only screen and (max-width: 1400px) {
+img.icon {margin:18px 30px;}
+}
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+#slides img.icon {margin:15px 28px;}
+#slides .three {width:30%; margin:2%;}
+#slides .four {width:40%; margin:1% 1%;}
+#slides .five {width:27%; margin:2% 2%;}
+}
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+#slides h1 {font:700 50px/60px 'Open Sans', arial, sans-serif;}
+#slides img.icon {width:96px; margin:15px 28px;}
+#slides .three {width:26%; margin:2%;}
+#slides .four {width:40%; margin:1%;}
+#slides .five {width:16%; margin:2% 6%;}
+}
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+#slides .three {width:30%; margin:2%;}
+#slides .five {width:27%; margin:2%;}
+}
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+#irmHolder .irm-panel .irm-panel-inner {bottom:15px;}
+#slides h1 {font:700 40px/50px 'Open Sans', arial, sans-serif;}
+#slides p {display:none;}
+#slides img.icon {width:48px; margin:10px 10px;}
+#slides .one {width:60%;}
+#slides .three {width:24%; margin:2%;}
+#slides .four {width:25%; margin:1% 5%;}
+#slides .five {width:15%; margin:2%;}
+}
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+#slides h1 {font:700 30px/40px 'Open Sans', arial, sans-serif;}
+#slides p {display:block;}
+#slides img.icon {width:64px; margin:5px 5px;}
+#slides .one {width:90%;}
+#slides .three {width:30%; margin:2%;}
+#slides .four {width:44%; margin:2%;}
+}

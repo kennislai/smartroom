@@ -1,0 +1,647 @@
+<!DOCTYPE html>  
+<html>
+<head>
+<title>Control Panel - SmartRoom</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="Keywords" content="IRM SmartRoom">
+<meta name="Description" content="SmartRoom Swipe Panel">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="application-name" content="SmartRoom">
+<meta name="msapplication-TileColor" content="#006699">
+<meta http-equiv="imagetoolbar" content="no">
+
+<!-- use local font file instead of going through the Internet -->
+<!-- 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+-->
+
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-switch.min.css">
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/slider.css">
+<link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="css/googleapis_font-openSans_400,700.css">
+
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<link type="text/css" rel="stylesheet" href="css/swipe4.css">
+<link type="text/css" rel="stylesheet" href="css/modalpanel.css">
+<link type="text/css" rel="stylesheet" href="css/w_tp.css">
+<link type="text/css" rel="stylesheet" href="css/light.css">
+<link type="text/css" rel="stylesheet" href="css/hvac.css">
+<link type="text/css" rel="stylesheet" href="css/aligner.css">
+<link type="text/css" rel="stylesheet" href="css/pad.css">
+<link type="text/css" rel="stylesheet" href="css/tv.css">
+<link type="text/css" rel="stylesheet" href="css/btn.css">
+<link type="text/css" rel="stylesheet" href="css/flex3.css">
+<link type="text/css" rel="stylesheet" href="css/flex4.css">
+<link type="text/css" rel="stylesheet" href="css/curtain1.css">
+<link type="text/css" rel="stylesheet" href="css/category.css">
+
+<style type="text/css">
+</style>
+</head>
+
+<body>
+<header>
+	<ul class="irm-btn irm-btn-group">
+		<div class="top">
+			<button type="button" class="btn btn-default btn-small irm-btn-base-shadow" id="power" value="0" aria-label="Power on/off">
+				<span class="fa fa-power-off fa-2x" aria-hidden="true"></span><br> 
+			</button>
+
+			<button type="button" class="btn btn-default btn-off irm-btn-base-shadow" aria-label="Do not disturb" id="dnd" value="">
+				<img src="img/dnd32.png" alt="top menu" title="do not disturb"><br>
+			</button>
+
+			<button type="button" class="btn btn-default btn-off btn-small irm-btn-base-shadow" aria-label="Make up room" id="makeuproom" value="">
+				<img src="img/Maid32.png" alt="top menu" title="make up room"><br>
+			</button>
+
+			<button type="button" class="btn btn-default btn-off btn-small irm-btn-base-shadow" aria-label="Laundry" id="laundry" value="">
+				<span style="display:inner-block;padding:15px 0 15px"></span>
+				<img src="img/laundry32.png" alt="top menu" title="laundry"><br>
+			</button>
+		</div>
+	</ul>
+</header>
+
+<section>  
+	<article id="slides">
+		<div id="irmHolder">
+
+		<!---------------------------------------------------------------------------------->        
+		   <div class="irm-panel animate" style="z-index: 10;">
+		      <div class="irm-panel-content" id="homeslide">
+
+
+				<div class="irm-panel-image"></div>
+				<div class="irm-whiteoverlay"></div>
+				<div class="irm-content-bot">    
+
+
+					<!------------------- Weather info  ---------------------->
+<div class="flex4-row-space-between">
+<div class="flex4-row">
+  <div class="w_info">
+		<div id="h_info">
+			<h1 id="h_name">Studio City</h1>
+			<h2 id="h_loc">Macau</h2>
+		</div>
+		<div id="today" class="w_date"></div>
+
+    <div class="flex4-row">
+      <div class="w_tp_group">
+        <div class="flex4-row">
+		      <div class="w_icon">
+            <img src="img/weather/chanceofstorm_n.png" 
+                 alt="chanceofstorm" title="chanceofstorm">
+          </div>
+          
+			    <div class="w_tp_item">
+				  <div class="w_tp_highlight">
+					  <span class="" id="w_current_temp_fahrenheit" style="display:none"></span>
+					  <span class="" id="w_current_temp_celsius" style="display:inline"></span>
+				  </div>
+          </div>
+          <div class="w_tp_item">
+				    <div class="w_tp_super" >
+					    <span class="" style="display:none" aria-label="&#176;Fahrenheit">&#176;F</span>
+					    <span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span>
+				    </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w_tp_details">
+			  <div class="flex4-item">
+				  <div>Room Temperature: <span id="w_room_temperature"></span>
+            <span class="" aria-label="&#176;Celsius">&#176;C</span>
+          </div>
+				  <div>Room Humidity: <span id="w_room_humidity"></span>%</div>
+				  <div>Day High: <span id="w_dayhigh"></span>
+            <span class="" aria-label="&#176;Celsius">&#176;C</span>
+          </div>
+				  <div>Day Low: <span id="w_daylow"></span>
+            <span class="" aria-label="&#176;Celsius">&#176;C</span>
+          </div>
+        </div>
+
+		  </div>
+		</div>
+
+	</div>
+</div>
+					<!--------------------- end of Weather block (left)  ------------------- -->
+<div class="w_info">
+  <h3><span id="w_roomnumber">Room </span></h3>
+  <h2>Welcome</h2>
+  <h1><span id="w_guestname"></span></h1>
+          <!--------------------- end of Weather block (right) ------------------- -->
+
+
+
+
+				</div> 
+
+		      </div> <!-- end of irm-content-bot -->
+		   </div>
+
+		<!---------------------------------------------------------------------------------->    
+		    <div class="irm-panel animate" style="z-index: 9;">
+		      <div class="irm-panel-content" id="categoryslide">
+
+					<div class="categories "> 
+  <ul>
+    <li>
+      <div class="flex4-row">
+        <h1 class="title">Categories </h1>
+       </div>
+    </li>
+
+    <a href="hvac.html">
+	    <li class="btn btn-default irm-btn-170 irm-btn-base-shadow" aria-label="HVAC">    
+	      <br><span>HVAC</span>
+	    </li>
+    </a>
+    
+    <a href="curtain2.html">
+	    <li class="btn btn-default irm-btn-170 irm-btn-base-shadow" aria-label="Curtain">  
+	      <img src="img/curtain128.png" alt="curtain" title="Curtain" <span=""><br>Curtain | Shade
+	    </li>
+	</a>
+    
+    <a href="light.html">
+	    <li class="btn btn-default irm-btn-170 irm-btn-base-shadow" aria-label="Lighting" data-role="lighting">
+	      <img src="img/bulb_off128.png" alt="Lighting" title="Lighting">
+	      <span></span><br>Lighting
+	    </li>
+	</a>
+    
+    <a href="tv.html">
+	    <li class="btn btn-default irm-btn-170 irm-btn-base-shadow" aria-label="Television"> 
+	      <img src="img/tv_bgt.png" alt="TV" title="TV"> 
+	      <span></span> <br>Television
+	    </li>
+	</a>
+
+    <li class="btn btn-default irm-btn-170 irm-btn-base-shadow" aria-label="Scene">       
+      <span></span> <br><span>Scene</span>
+    </li> 
+    
+    <a href="wakeupcall.html">
+	    <li class="btn btn-default irm-btn-170 irm-btn-base-shadow" aria-label="alarm">
+	      <img src="img/alarm-clock128.png" alt="Wakeup Call" title="Wakeup Call">
+	      <br>Wakeup Call
+	    </li>      
+	</a>
+    
+    <li>
+   <!------------------- self service ------------------>
+     <div class="self-service">
+       <div class="flex4-row">
+   
+          <div class="flex4-item">
+           <h3>Self Services</h3>
+          </div>
+     
+     		<a href="checkout.html">
+	          <button type="button" class="btn btn-default irm-btn-100" aria-label="Check out">
+	              <span class="glyphicon glyphicon-log-out fa-2x" aria-hidden="true"></span><br> Check out
+	          </button>
+          	</a>
+
+			<a href="roomservicemenu.html">
+	          <button type="button" class="btn btn-default btn-circle irm-btn-100" aria-label="Room Service">
+	            <img src="img/room-service32.png" alt="Room Service" title="Room Service">
+	            <span class=""></span><br> Room Service
+	          </button> 
+			</a>         
+
+			<a href="teatimemenu.html">
+	          <button type="button" class="btn btn-default btn-circle irm-btn-100" aria-label="Tea">
+	            <img src="img/tea32.png" alt="Tea" title="Tea">
+	            <span class=""></span><br> Tea
+	          </button>
+			</a>
+
+      </div>
+    </div> 
+
+   <!-------------------end of self service ------------------>
+   </li> 
+   
+  </ul>
+ 
+ 
+</div>
+
+
+		      </div>
+		  </div>
+
+		<!---------------------------------------------------------------------------------->    
+		    <div class="irm-panel animate" style="z-index: 8;">
+		      <div class="irm-panel-content" id="lightingslide">
+					<div id="lights" class="w450" style="">
+				      	<h1><img src="img/bulb_off128.png" class="icon" alt="lights" title="">Lighting</h1>
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span class="fa fa-lightbulb-o l_c_off" style=""></span><span>Dimmer</span>
+								</li>
+								<li class="flex-item"  style="background: #f2f2f2">
+									<div id="dimmerlightslider" class="slider slider-horizontal">
+										<input type="text"
+											data-slider-min="1" data-slider-max="10" data-slider-step="1"
+											data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
+									</div>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="dimmerlight" name="switch2" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+									<span class="fa fa-lightbulb-o fa-2" style="" id="dimmerlighticon"></span>
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->  
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span class="fa fa-lightbulb-o l_c_off" style=""></span><span>Dog House</span>
+								</li>
+								<li class="flex-item">
+									<div class="hide" style="background: #f2f2f2">
+									</div>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="doghouselight" name="switch3" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+									<span class="fa fa-lightbulb-o fa-2" style="" id="doghouselighticon"></span>
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->   
+					</div>
+
+		      </div> <!-- end of irm-oanel-content -->
+		    </div>
+
+		 <!---------------------------------------------------------------------------------->    
+
+		    <div class="irm-panel animate" style="z-index: 7;">
+		      <div class="irm-panel-content" id="tvslide">
+
+<div class="center">
+<div class="tv-control tv-controlpad" style="">
+
+  <h1 class="title">
+    <span class="fa fa-television fa-2-5" aria-hidden="true"></span>
+    <span class="title">tv</span>
+  </h1> <hr>
+
+
+<!--------- Row 1 ------------------------ -->
+
+  <div class="flex4-row">
+    <div class="flex4-column">
+
+      <div class="flex4-item">
+        <div class="btn btn-default irm-btn-base-shadow" 
+             data-role='tv' data-key="mute" data-fn="mute" data-value="0"
+             aria-label="tv" 
+             style="margin-bottom:10px">
+          <i class="fa fa-volume-off fa-2"></i>
+          <i class="fa fa-times fa-2"></i>
+        </div>
+      </div>
+
+      <div class="flex4-item">
+        <div class="btn btn-default btn-circle irm-btn-base-shadow btn-tv-power" 
+             data-role="tv" data-key="power"  data-fn="power" data-value="0">  
+          <i class="fa fa-power-off fa-2"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!--------- end of Row 1 ----------------- -->
+
+<!------------- row 2 -------------------- -->
+
+  <div class="flex4-row tv-controlpad" style=""> 
+
+    <div class="flex4-item" style="margin: 8px;"> <!-- volume -->
+      <div class="irm-2btn-container-default">
+        <div class="btn btn-default irm-btn-upcaret irm-btn-noborder" 
+             data-role="tv" aria-label="tv" data-key="volume-up" data-fn='volume.up'>
+          <span class="irm-btn-large">&and;</span>
+        </div><span>Volume</span>
+        <div class="btn btn-default irm-btn-dncaret irm-btn-noborder" 
+             data-role="tv" aria-label="tv" data-key="volume-dn" data-fn='volume.down'>
+          <span class="irm-btn-large">&and;</span>
+        </div>
+      </div>
+    </div>
+
+
+<!-- ================================== - -->
+
+<div class="flex4-item">
+<div id="tv-numpad" class="">
+<irm-numpad>
+<div class="pad-container">
+<div class="pad-wrapper">
+<div class="pad keypad-group">
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>1</span></div> <!--default size: 40x34 -->
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>2</span></div>
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>3</span></div>
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>4</span></div>
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>5</span></div>
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>6</span></div>
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>7</span></div>
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>8</span></div>
+   <div class="btn btn-default irm-btn-base-shadow num" data-role="pad"><span>9</span></div>
+   <div class="center keypad-group">
+    <div class="btn btn-default irm-btn-base-shadow btn-tv" data-role="pad"><span>0</span></div>
+   </div>
+</div></div></div>
+
+<script type="text/javascript" src="js/pad.js"></script> 
+
+</irm-numpad>
+</div>
+</div>
+<!-- ================================== - -->
+
+
+   <div class="flex4-item" style="margin:8px;"> <!-- channel - -->
+     <div class="irm-2btn-container-default">
+       <div class="btn btn-default irm-btn-upcaret irm-btn-noborder" 
+            data-role="tv" aria-label="tv" data-key="channel-up" data-fn="channel.up">
+         <span class="irm-btn-large">&and;</span>
+       </div><span>Channel</span>
+       <div class="btn btn-default irm-btn-dncaret irm-btn-noborder" 
+            data-role="tv" aria-label="tv" data-key="channel-dn" data-fn="channel.down">
+         <span class="irm-btn-large">&and;</span>
+       </div>
+     </div>
+   </div>
+
+
+  </div> <!-- "flex-row" -->
+
+<!--------------- End of row 2 -------------- -->
+
+</div>
+
+<!------------- End of TV ---------------->
+</div> <!-- end of center block  -->   
+
+
+		      </div>  <!-- end of irm-content-bot -->
+		    </div>
+		 
+		 <!---------------------------------------------------------------------------------->      
+
+		    <div class="irm-panel animate" style="z-index: 6;">
+		      <div class="irm-panel-content" id="hvacslide">
+					<div id="hvac" class="w450" style="">
+
+						<h1>HVAC</h1>
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>Room Temp:</span>
+									<span id="roomTemp"></span>
+								</li>
+								<li class="flex-item">
+									<span>Room Hum:</span>
+									<span id="roomHum"></span>
+								</li>
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->  
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>A/C</span>
+								</li>
+								<li class="flex-item">
+									<button type="button" id="actempdown">-</button>
+									<span id="actemp"></span><span>&#176;C</span>
+									<button type="button" id="actempup">+</button>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="acpower" name="switch2" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->  
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>Heater</span>
+								</li>
+								<li class="flex-item">
+									<button type="button" id="heatertempdown">-</button>
+									<span id="heatertemp"></span><span>&#176;C</span>
+									<button type="button" id="heatertempup">+</button>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="heaterpower" name="switch3" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->   
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>Fan</span>
+								</li>
+								<li class="flex-item">
+									<span></span>
+								</li>
+
+								<li class="flex-item">
+									<button type="button">Low</button>
+									<button type="button">Mid</button>
+									<button type="button">High</button>
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->   
+					</div>
+
+		      </div> <!-- end of irm-coanel-content -->
+		    </div>
+
+		 <!---------------------------------------------------------------------------------->
+
+
+		    <div class="irm-panel animate" style="z-index: 5;">
+		      <div class="irm-panel-content" id="curtainslide">
+					<div class="center">
+						<div class="curtain" class="" style="">
+							<h1 class="title"><img src="img/curtain128.png" alt="curtain" title="">Curtain</h1><hr>
+
+							<div class="flex4-row irm-curtain">
+								<div class="btn btn-default irm-btn-curtain" data-role="curtain" data-fn="stopAll" aria-label="Curtain">
+									<span class="btn-big-text" style="padding:15px 0 0 0">Stop</span>
+								</div>
+							</div> 
+
+							<div class="flex4-row irm-curtain">
+								<div class="btn btn-default irm-btn-curtain-close" data-fn="close" data-role="curtain"  aria-label="Curtain">
+									<img src="img/curtain_c32.png" alt="curtain close" title="curtain close">
+									<div> Close </div>
+									<div class="flex4-row">
+										<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-left" ></i>
+									</div>
+								</div>
+
+								<div class="btn btn-default irm-btn-curtain-open" data-fn="open" data-role="curtain" aria-label="Curtain">
+									<img src="img/curtain_o32.png" alt="curtain close" title="curtain open">
+									<div> Open </div>
+									<div class="flex4-column">
+										<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right" ></i>  
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div> <!-- end of "center" block -->
+		      </div> <!-- end of irm-coanel-content -->
+		    </div>
+
+		<!---------------------------------------------------------------------------------->    
+		     
+		   <div id="bullets"></div>
+		</div>  <!-- end of irmHolder -->
+	</article>  
+</section>   
+
+<irm-menu>
+
+<!------------------ Slide Menu Section --------------------- -->
+<input type="radio" name="action" id="irm-slide-close">
+<input type="radio" name="action" id="irm-slide-right" class="irm-menu-panel-hidden">
+<input type="radio" name="action" id="irm-slide-left" class="irm-menu-panel-hidden">
+<label for="irm-slide-close" class="irm-slide-overlay-close"></label>
+
+<div class="irm-slide irm-slide-right"><label for="irm-slide-close" class="irm-slide-close"></label>
+  <span>SmartRoom</span>
+  <ul class="irm-modal-menu">
+    <li><a href="#">Self-Service</a>
+    	<ul>
+			<li><a href="roomservicemenu.html">Room Service Menu</a></li>
+			<li><a href="teatimemenu.html">Tea Time</a></li>
+			<li><a href="wakeupcall.html">Wakeup Call</a></li>
+			<li><a href="checkout.html">Checkout</a></li>
+		</ul>
+    </li>
+
+    <li><a href="#">Information</a>
+			<ul>
+				<li><a href="wheretogo.html">Where To Go</a></li>
+				<li><a href="#">Point Of Interest</a></li>
+				<li><a href="eat.html">Eat</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">Special Events</a></li>
+				<li><a href="#">Special News</a></li>
+				<li><a href="#">Discount</a></li>
+			</ul>
+    </li>
+
+  </ul>
+</div>
+
+<div class="irm-slide irm-slide-left">
+  <span>SmartRoom</span>
+  <ul class="irm-modal-menu">
+    <li><a href="#">Self-Service</a></li>
+
+    <li><a href="#">Information</a>
+			<ul>
+				<li><a href="#">submenu 1</a></li>
+				<li><a href="#">submenu 2</a></li>
+				<li><a href="#">submenu 3</a></li>
+			</ul>
+    </li>
+    <li><a href="#">blah blah</a></li>
+  </ul>
+</div>
+
+
+<!-------------- End of Slide Menu Section -------------- -->
+
+
+</irm-menu>
+
+ 
+<footer >
+    <label for="irm-slide-close" class="irm-slide-close"></label>
+    <ul class="irm-btn irm-btn-group">
+      <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Room Control">
+          <span class="fa fa-map-marker fa-2x" aria-hidden="true"></span><br>      
+      </li>
+      <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Room Control">
+          <span class="fa fa-home fa-2x" aria-hidden="true"></span><br>      
+     </li>
+     <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Favorites">
+          <span class="fa fa-star fa-2x" aria-hidden="true"></span><br> 
+     </li>
+     <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Power on/off">
+         <span class="fa fa-power-off fa-2x" aria-hidden="true"></span><br> 
+     </li>
+     <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="menu">
+         <label for="irm-slide-right" class="fa fa-bars fa-2x" aria-hidden="true"></label> 
+         <span class="irm-mesg-in"></span>
+     </li>
+    </ul>  
+</footer>
+
+
+<script type="text/javascript" src="lib/jquery/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap-switch.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap-slider.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/socketio/socket.io.js"></script>
+<script type="text/javascript" src="js/swipe2.js"></script> 
+<script type="text/javascript" src="js/event.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/light.js"></script>
+<script type="text/javascript" src="js/hvac.js"></script>
+<script type="text/javascript" src="js/pad.js"></script>
+<script type="text/javascript" src="js/tv.js"></script>
+<script type="text/javascript" src="js/curtain.js"></script>
+<script type="text/javascript" src="js/inject.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	date_time();
+	courtesy_initialize();
+	light_initialize();
+	hvac_initialize();
+});
+
+
+        
+</script>
+</body>
+</html>

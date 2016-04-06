@@ -1,0 +1,34 @@
+/* 
+ Dependencies:
+   css/aligner.css
+   lib/bootstrap/css/bootstrap.min.css
+   lib/font-awesome/css/font-awesome.min.css
+   css/googleapis_font-openSans_400,700.css
+ */
+
+.pad-container{
+  width:138px;height:160px;
+  background-color:#eee; 
+  margin:auto;
+  padding-left:1px;
+  position:relative
+}
+.pad-wrapper { 
+  width:128px;height:148px;
+  position:absolute; top:0px;
+	background-color:#fff;
+  padding:1px;
+	margin:5px;
+  box-shadow: 0 10px 6px -6px #777;  
+}
+.pad { width: 128px !important; margin:0; padding:0 }
+.pad div {margin:1px;}
+.num {font:400 20px/20px 'Open Sans', arial, sans-serif; color:#555}
+
+.pad .btn {border-radius: 10px;outline: none;}
+.pad .btn:hover,.pad .btn:target, .pad .btn:focus,.pad .btn:active,.pad .btn.active {
+background-color: #e6ffe6 !important;outline: none !important;color:#000 !important;-webkit-box-shadow: 0 5px #595959;-moz-box-shadow: 0 5px #595959;box-shadow: 0 5px #595959;} 
+.pad .btn:focus,.pad .btn:active,.pad .btn.active{background-color: palegreen !important;}
+.pad .btn:not(.btn-small):hover, .pad .btn:not(.btn-small):target, .pad .btn:not(.btn-small):focus {-webkit-transform: none; transform: none;}
+.pad .irm-btn-base-shadow {-webkit-box-shadow: 0 5px #595959;-moz-box-shadow: 0 5px #595959;box-shadow: 0 5px #595959;}
+

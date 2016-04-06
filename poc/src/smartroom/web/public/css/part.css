@@ -1,0 +1,8 @@
+#categories ul, #categories li {list-style: none; display: inner-block}
+#categories .btn { margin-bottom: 15px }
+#categories li span:last-child{font-size:3em; display:inline-block;padding-top:25px}
+#categories div {display:table-cell}
+#self-service h3 {text-align: left; text-transform: uppercase;}
+.w500 {max-width:500px !impportant; margin:auto}
+
+.w450max {width:300px;border-bottom:#aaa 1px inset;margin:auto}

@@ -1,0 +1,60 @@
+{
+  "server": "ws://192.168.0.3:3002",
+  "port": "3004",
+  "devices": [{
+    "type": "TEMPERATURE_SENSOR",
+    "name": "temperatureSensor",
+    "pin": "P8_11"
+  }, {
+    "type": "MOTION_SENSOR_PIR",
+    "name": "motionSensorPIR_1",
+    "pin": "P8_28",
+    "noMotionTimeoutMS": 15000
+  }, {
+    "type": "BLUETOOTH_BEACON_SENSOR",
+    "name": "bluetoothBeaconSensor_1",
+    "wakeUpPin": "P9_28",
+    "alarmPin" : "P8_13",
+    "baudRate": 115200,
+    "port": "/dev/ttyO1",
+    "refreshRate": 4000,
+    "trackingDevices": [{
+      "name": "Key Card",
+      "macAddress": "78A5047B8F5D",
+      "txPower": -72,
+      "range": 2,
+      "enable": false
+    }, {
+      "name": "Samsung Tablet",
+      "macAddress": "78A5047B8F13",
+      "txPower": -72,
+      "range": 2.0,
+      "enable": true
+    }]
+  }, {
+    "type": "SPEAKUP_SENSOR",
+    "name": "speakupSensor",
+    "baudRate": 115200,
+    "port": "/dev/ttyO2",
+    "commands": [{
+      "name": "Turn On Light",
+      "index": 0
+    }, {
+      "name": "Turn Off Light",
+      "index": 1
+    }, {
+      "name": "Turn On Light",
+      "index": 2
+    }, {
+      "name": "Turn Off Light",
+      "index": 3
+    }, {
+      "name": "Turn On Light",
+      "index": 4
+    }, {
+      "name": "Turn Off Light",
+      "index": 5
+    }]
+  }],
+  "subscribe": ["TEMPERATURE", "MOTION"]
+}

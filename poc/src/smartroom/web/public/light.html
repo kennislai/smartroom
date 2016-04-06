@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Lights</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="Keywords" content="IRM SmartRoom">
+	<meta name="Description" content="SmartRoom Swipe Panel">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="application-name" content="SmartRoom">
+	<meta name="msapplication-TileColor" content="#006699">
+	<meta http-equiv="imagetoolbar" content="no">
+
+	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-switch.min.css">
+	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/slider.css">
+	<link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="css/googleapis_font-openSans_400,700.css">
+	<link type="text/css" rel="stylesheet" href="css/light.css">
+	<link type="text/css" rel="stylesheet" href="css/btn.css">
+	<link type="text/css" rel="stylesheet" href="css/flex3.css">
+</head>
+
+
+<body>
+	<!------------------ Light Control ------------------>
+	<div id="lights" class="w450" style="">
+		<h1><img src="img/bulb_off128.png" class="icon" alt="lights" title="">Lighting</h1>
+
+		<div class="flex-row">
+			<ul class="flex-column">
+				<li class="flex-item">
+					<span class="fa fa-lightbulb-o l_c_off" style=""></span><span>Dimmer</span>
+				</li>
+				<li class="flex-item"  style="background: #f2f2f2">
+					<div id="dimmerlightslider" class="slider slider-horizontal">
+						<input type="text"
+							data-slider-min="1" data-slider-max="10" data-slider-step="1"
+							data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
+					</div>
+				</li>
+
+				<li class="flex-item">
+					<input type="checkbox" id="dimmerlight" name="switch2" data-type-id="bswitch"
+						data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+						data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+					<span class="fa fa-lightbulb-o fa-2" style="" id="dimmerlighticon"></span>
+				</li>  
+			</ul> <!-- "flex-column" -->
+		</div> <!-- "flex-row" -->  
+
+		<div class="flex-row">
+			<ul class="flex-column">
+				<li class="flex-item">
+					<span class="fa fa-lightbulb-o l_c_off" style=""></span><span>Dog House</span>
+				</li>
+				<li class="flex-item">
+					<div class="hide" style="background: #f2f2f2">
+					</div>
+				</li>
+
+				<li class="flex-item">
+					<input type="checkbox" id="doghouselight" name="switch3" data-type-id="bswitch"
+						data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+						data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+					<span class="fa fa-lightbulb-o fa-2" style="" id="doghouselighticon"></span>
+				</li>  
+			</ul> <!-- "flex-column" -->
+		</div> <!-- "flex-row" -->   
+
+	</div>
+	<!------------------------------- End of Lighting ------------------------------- -->
+
+	<script type="text/javascript" src="lib/jquery/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap-switch.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap-slider.js"></script>
+	<script type="text/javascript" src="lib/socketio/socket.io.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/light.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			light_initialize();
+		});
+	</script>
+</body>
+</html>

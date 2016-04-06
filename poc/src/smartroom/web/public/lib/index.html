@@ -1,0 +1,390 @@
+<!DOCTYPE html>  
+<html>
+<head>
+<title>Control Panel - SmartRoom</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="Keywords" content="IRM SmartRoom">
+<meta name="Description" content="SmartRoom Swipe Panel">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="application-name" content="SmartRoom">
+<meta name="msapplication-TileColor" content="#006699">
+<meta http-equiv="imagetoolbar" content="no">
+
+<!-- use local font file instead of going through the Internet -->
+<!-- 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+-->
+
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-switch.min.css">
+<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/slider.css">
+<link type="text/css" rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="css/googleapis_font-openSans_400,700.css">
+
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<link type="text/css" rel="stylesheet" href="css/swipe4.css">
+<link type="text/css" rel="stylesheet" href="css/modalpanel.css">
+<link type="text/css" rel="stylesheet" href="css/w_tp.css">
+<link type="text/css" rel="stylesheet" href="css/light.css">
+<link type="text/css" rel="stylesheet" href="css/hvac.css">
+<link type="text/css" rel="stylesheet" href="css/aligner.css">
+<link type="text/css" rel="stylesheet" href="css/pad.css">
+<link type="text/css" rel="stylesheet" href="css/tv.css">
+<link type="text/css" rel="stylesheet" href="css/btn.css">
+<link type="text/css" rel="stylesheet" href="css/flex3.css">
+<link type="text/css" rel="stylesheet" href="css/flex4.css">
+
+<style type="text/css">
+
+#irmHolder .col{position:absolute;top:0;right:10px;text-align:left;}
+#irmHolder .col_header {font:700 40px/40px 'Open Sans', arial, sans-serif; color:#878 !important; }
+#irmHolder .col_subtitle { font:300 30px/30px 'Open Sans', arial, sans-serif; color:#878 !important; }
+#irmHolder .col_subject {padding:10px 0px;font:300 20px 'Open Sans', arial, sans-serif !important;line-height:25px;color:#000;}
+
+</style>
+</head>
+
+<body>
+<header>
+	<ul class="irm-btn irm-btn-group">
+		<div class="top">
+			<button type="button" class="btn btn-default btn-small irm-btn-base-shadow" aria-label="Power on/off">
+				<span class="fa fa-power-off fa-2x" aria-hidden="true"></span><br> 
+			</button>
+
+			<button type="button" class="btn btn-default btn-off irm-btn-base-shadow" aria-label="Do not disturb" id="dnd" value="">
+				<img src="img/dnd32.png" alt="top menu" title="do not disturb"><br>
+			</button>
+
+			<button type="button" class="btn btn-default btn-off btn-small irm-btn-base-shadow" aria-label="Make up room" id="makeuproom" value="">
+				<img src="img/Maid32.png" alt="top menu" title="make up room"><br>
+			</button>
+
+			<button type="button" class="btn btn-default btn-off btn-small irm-btn-base-shadow" aria-label="Laundry" id="laundry" value="">
+				<span style="display:inner-block;padding:15px 0 15px"></span>
+				<img src="img/laundry32.png" alt="top menu" title="laundry"><br>
+			</button>
+		</div>
+	</ul>
+</header>
+
+<section>  
+	<article id="slides">
+		<div id="irmHolder">
+
+		<!---------------------------------------------------------------------------------->        
+		   <div class="irm-panel animate" style="z-index: 8;">
+		      <div class="irm-panel-content" id="homeslide">
+
+
+				<div class="irm-panel-image"></div>
+				<div class="irm-whiteoverlay"></div>
+				<div class="irm-content-bot">    
+
+					<!------------------- Weather info  ---------------------->
+
+					<div id="w_info" class="w_info">
+						<div id="h_info">
+							<h1 id="h_name">Studio City</h1>
+							<h2 id="h_loc">Macau</h2>
+						</div>
+						<div id="today" class="w_date"></div>
+
+						<div class="w_flex_container">
+							<div class="w_flex_item w_center_item">
+								<img id="w_icon" class="w_icon">
+							</div>
+							<div id="w_flex_item">
+								<div class="w_tp_highlight">
+									<span class="" id="w_current_temp_fahrenheit" style="display:none"></span>
+									<span class="" id="w_current_temp_celsius" style="display:inline"></span>
+								</div>
+							</div>  
+							<div id="w_flex_item">
+								<div class="w_tp_super">
+									<span class="" style="display:none" aria-label="&#176;Fahrenheit">&#176;F</span>
+									<span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span>
+								</div>
+							</div>
+
+							<div class="w_flex_item w_tp_textbox">
+								<div>Room Temperature: <span id="w_room_temperature"></span><span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span></div>
+								<div>Room Humidity: <span id="w_room_humidity"></span>%</div>
+								<div>Day High: <span id="w_dayhigh"></span><span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span></div>
+								<div>Day Low: <span id="w_daylow"></span><span class="" style="display:inline" aria-label="&#176;Celsius">&#176;C</span></div>
+							</div>
+						</div>
+					</div>
+
+					<!--------------------- end of Weather block (left)  ------------------- -->
+					<div class="col">
+						<p class="col_header">Room <span id="w_roomnumber"></span></p>
+						<p class="col_subtitle">Welcome</p>
+						<p class="col_subtitle"><span id="w_guestname"></span></p>
+					</div>
+					<!--------------------- end of Weather block (right) ------------------- -->
+
+				</div> 
+
+		      </div> <!-- end of irm-content-bot -->
+		   </div>
+
+		<!---------------------------------------------------------------------------------->    
+		    <div class="irm-panel animate" style="z-index: 7;">
+		      <div class="irm-panel-content" id="lightingslide">
+					<div id="lights" class="w450" style="">
+				      	<h1><img src="img/bulb_off128.png" class="icon" alt="lights" title="">Lighting</h1>
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span class="fa fa-lightbulb-o l_c_off" style=""></span><span>Dimmer</span>
+								</li>
+								<li class="flex-item"  style="background: #f2f2f2">
+									<div id="dimmerlightslider" class="slider slider-horizontal">
+										<input type="text"
+											data-slider-min="1" data-slider-max="10" data-slider-step="1"
+											data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show">
+									</div>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="dimmerlight" name="switch2" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+									<span class="fa fa-lightbulb-o fa-2" style="" id="dimmerlighticon"></span>
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->  
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span class="fa fa-lightbulb-o l_c_off" style=""></span><span>Dog House</span>
+								</li>
+								<li class="flex-item">
+									<div class="hide" style="background: #f2f2f2">
+									</div>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="doghouselight" name="switch3" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+									<span class="fa fa-lightbulb-o fa-2" style="" id="doghouselighticon"></span>
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->   
+					</div>
+
+		      </div> <!-- end of irm-oanel-content -->
+		    </div>
+
+		 <!---------------------------------------------------------------------------------->    
+
+		    <div class="irm-panel animate" style="z-index: 6;">
+		      <div class="irm-panel-content" id="tvslide">
+
+
+
+		      </div>  <!-- end of irm-content-bot -->
+		    </div>
+		 
+		 <!---------------------------------------------------------------------------------->      
+
+		    <div class="irm-panel animate" style="z-index: 5;">
+		      <div class="irm-panel-content" id="hvacslide">
+					<div id="hvac" class="w450" style="">
+
+						<h1>HVAC</h1>
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>Room Temp:</span>
+									<span id="roomTemp"></span>
+								</li>
+								<li class="flex-item">
+									<span>Room Hum:</span>
+									<span id="roomHum"></span>
+								</li>
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->  
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>A/C</span>
+								</li>
+								<li class="flex-item">
+									<button type="button" id="actempdown">-</button>
+									<span id="actemp"></span><span>&#176;C</span>
+									<button type="button" id="actempup">+</button>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="acpower" name="switch2" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->  
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>Heater</span>
+								</li>
+								<li class="flex-item">
+									<button type="button" id="heatertempdown">-</button>
+									<span id="heatertemp"></span><span>&#176;C</span>
+									<button type="button" id="heatertempup">+</button>
+								</li>
+
+								<li class="flex-item">
+									<input type="checkbox" id="heaterpower" name="switch3" data-type-id="bswitch"
+										data-size="mini" data-on-label="&nbsp;" data-off-label="&nbsp;"
+										data-on-color="success" data-handle-width="20px" data-label-width="20px;">
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->   
+
+						<div class="flex-row">
+							<ul class="flex-column">
+								<li class="flex-item">
+									<span>Fan</span>
+								</li>
+								<li class="flex-item">
+									<span></span>
+								</li>
+
+								<li class="flex-item">
+									<button type="button">Low</button>
+									<button type="button">Mid</button>
+									<button type="button">High</button>
+								</li>  
+							</ul> <!-- "flex-column" -->
+						</div> <!-- "flex-row" -->   
+					</div>
+
+		      </div> <!-- end of irm-coanel-content -->
+		    </div>
+
+		 <!---------------------------------------------------------------------------------->      
+
+
+		    <div class="irm-panel animate" style="z-index: 4;">
+		      <div class="irm-panel-content" id="curtainslide">
+		      	
+		      </div> <!-- end of irm-coanel-content -->
+		    </div>
+
+		 <!---------------------------------------------------------------------------------->      
+
+		     
+		   <div id="bullets"></div>
+		</div>  <!-- end of irmHolder -->
+	</article>  
+</section>   
+
+<irm-menu>
+
+<!------------------ Slide Menu Section ----------------------->
+<input type="radio" name="action" id="irm-slide-close">
+<input type="radio" name="action" id="irm-slide-right" class="irm-menu-panel-hidden">
+<input type="radio" name="action" id="irm-slide-left" class="irm-menu-panel-hidden">
+<label for="irm-slide-close" class="irm-slide-overlay-close"></label>
+
+<div class="irm-slide irm-slide-right"><label for="irm-slide-close" class="irm-slide-close"></label>
+  <span>SmartRoom</span>
+  <ul class="irm-modal-menu">
+    <li><a href="#">Self-Service</a></li>
+
+    <li><a href="#">Information</a>
+			<ul>
+				<li><a href="#">submenu 1</a></li>
+				<li><a href="#">submenu 2</a></li>
+				<li><a href="#">submenu 3</a></li>
+			</ul>
+    </li>
+    <li><a href="#">blah blah</a></li>
+  </ul>
+</div>
+
+<div class="irm-slide irm-slide-left">
+  <span>SmartRoom</span>
+  <ul class="irm-modal-menu">
+    <li><a href="#">Self-Service</a></li>
+
+    <li><a href="#">Information</a>
+			<ul>
+				<li><a href="#">submenu 1</a></li>
+				<li><a href="#">submenu 2</a></li>
+				<li><a href="#">submenu 3</a></li>
+			</ul>
+    </li>
+    <li><a href="#">blah blah</a></li>
+  </ul>
+</div>
+
+
+<!-------------- End of Slide Menu Section ---------------->
+
+
+</irm-menu>
+
+ 
+<footer >
+    <label for="irm-slide-close" class="irm-slide-close"></label>
+    <ul class="irm-btn irm-btn-group">
+      <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Room Control">
+          <span class="fa fa-map-marker fa-2x" aria-hidden="true"></span><br>      
+      </li>
+      <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Room Control">
+          <span class="fa fa-home fa-2x" aria-hidden="true"></span><br>      
+     </li>
+     <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Favorites">
+          <span class="fa fa-star fa-2x" aria-hidden="true"></span><br> 
+     </li>
+     <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="Power on/off">
+         <span class="fa fa-power-off fa-2x" aria-hidden="true"></span><br> 
+     </li>
+     <li class="btn btn-warning btn-small irm-btn-base-shadow" aria-label="menu">
+         <label for="irm-slide-right" class="fa fa-bars fa-2x" aria-hidden="true"></label> 
+         <span class="irm-mesg-in"></span>
+     </li>
+    </ul>  
+</footer>
+
+
+<script type="text/javascript" src="lib/jquery/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap-switch.js"></script>
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap-slider.js"></script>
+<script type="text/javascript" src="lib/socketio/socket.io.js"></script>
+<script type="text/javascript" src="js/swipe2.js"></script> 
+<script type="text/javascript" src="js/event.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/light.js"></script>
+<script type="text/javascript" src="js/hvac.js"></script>
+<script type="text/javascript" src="js/pad.js"></script>
+<script type="text/javascript" src="js/tv.js"></script>
+<script type="text/javascript" src="js/inject.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	date_time();
+	courtesy_initialize();
+	light_initialize();
+	hvac_initialize();
+});
+
+
+        
+</script>
+</body>
+</html>

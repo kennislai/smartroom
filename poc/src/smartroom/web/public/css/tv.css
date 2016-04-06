@@ -1,0 +1,41 @@
+.btn-tv-power {width:64px;}
+.btn-tv {font:400 20px/20px 'Open Sans', arial, sans-serif; color:#555}
+
+.tv-control .btn[data-role='tv'] {border-radius: 15px;outline: none;}
+.tv-control .btn[data-role='tv']:hover,
+.tv-control .btn[data-role='tv']:target,.tv-control .btn[data-role='tv']:focus,
+.tv-control .btn[data-role='tv']:active,.tv-control .btn[data-role='tv'].active{background-color:palegreen !important;outline: none !important;color:#000 !important;-webkit-box-shadow: 0 5px #27496d;-moz-box-shadow: 0 5px #27496d;box-shadow: 0 5px #27496d;} 
+
+.btn[data-role='tv']:not(.btn-small):hover, .btn[data-role='tv']:not(.btn-small):target, .btn:not(.btn-small):focus {-webkit-transform: none; transform: none;}
+
+.irm-2btn-container-default {display:inline-block;width:58px;height:174px;margin:0;padding:2px;border-radius:15px;border:1px #ccc solid;background-color:#fff;color:#333;}
+.irm-2btn-container-wider {width:116px;text-align:center;}
+
+.irm-btn-upcaret,.irm-btn-dncaret {width:50px;height:75px;padding:0;margin:0;border-radius:15px;}
+.irm-btn-upcaret {vertical-align:top;}
+.irm-btn-dncaret {vertical-align:bottom;transform:rotate(180deg);}
+.irm-btn-upcaret[data-role='tv']:hover,.irm-btn-upcaret[data-role='tv']:focus {background-color:palegreen;}
+.btn.irm-btn-dncaret[data-role='tv']:hover,.irm-btn-dncaret[data-role='tv']:focus {vertical-align:bottom;transform:rotate(180deg);background-color:palegreen;
+}
+.irm-2btn-container-default:hover,
+.irm-2btn-container-default:hover.btn[data-role='tv'].fa,
+{
+ border:3px solid #6B8513;
+ background-color: #9ce366; background-image: -webkit-gradient(linear, left top, left bottom, from(#9ce366), to(#41E620));
+ background-image: -webkit-linear-gradient(top, #9ce366, #41E620);
+ background-image: -moz-linear-gradient(top, #9ce366, #41E620);
+ background-image: -ms-linear-gradient(top, #9ce366, #4a1E620);
+ background-image: -o-linear-gradient(top, #9ce366, #41E620);
+ background-image: linear-gradient(to bottom, #9ce366, #41E620);
+ filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#9ce366, endColorstr=#41E620);
+box-shadow:none;
+}
+
+.irm-btn-noborder{border:0;margin:0;padding:0;}
+.irm-2btn-container-wider .irm-valign-middle,
+.irm-2btn-container-wider .irm-valign-middle:hover{position:relative;top:50%;transform:translateY(-50%)}
+.irm-2btn-container-default .irm-btn-upcaret[data-role='tv'] span {display:inner-block;height:10px;}
+
+.tv-control .btn[data-role='tv'] .irm-btn-base-shadow {-webkit-box-shadow: 0 5px #27496d;-moz-box-shadow: 0 5px #27496d;box-shadow: 0 5px #27496d;}
+
+.tv-controlpad {width: 286px /*254 + 8*4 = 286*/}

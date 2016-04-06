@@ -1,0 +1,7 @@
+.curtain .btn[data-role='curtain'] img {max-width:100%;height:auto;}
+.curtain .flex4-row.irm-curtain {padding: 5px}
+.btn-big-text {font: 400 25px/25px 'Open Sans', arial, sans-serif;color:#555;text-transform:uppercase; display:block;padding:20px 0 0 0}
+
+.curtain .btn[data-role='curtain'] span {margin: 0 8px 0;}
+.irm-btn-curtain,.irm-btn-curtain-close, .irm-btn-curtain-open {width:150px;height:80px;}
+.irm-btn-curtain {width:300px;}

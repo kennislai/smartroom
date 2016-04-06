@@ -1,0 +1,52 @@
+.irm-menucall {width:100vw; transition: 1s; position:relative; z-index:10; background:#fff;
+-webkit-transform:translate3d(0vw,0vh,0);transform:translate3d(0vw,0vh,0);
+}
+.irm-menucall p {font-size:2vmin; color:#444; width:60vw; margin:0 auto; text-align:center;}
+.irm-menucall h4 {text-align:center;}
+#irm-slide-close,
+.irm-menu-panel-hidden {position:absolute; left:-9999px; display:none;}
+label.irm-slide-close {display:block; width:3vw; height:3vw; color:#fff; position:absolute; right:2vw; top:2vw; cursor:pointer;}
+label.irm-slide-close:before {display:block; content:""; width:100%; height:4px; background:#fff; position:absolute; left:0; top:50%; margin-top:-2px; 
+-webkit-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+label.irm-slide-close:after {display:block; content:""; width:100%; height:4px; background:#fff; position:absolute; left:0; top:50%; margin-top:-2px; 
+-webkit-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+.irm-menucall-block {display:block; width:20vw; height:8vh; margin:0 auto; cursor:pointer; text-align:center; font-size:2vmin; color:#fff; line-height:8vh; }
+
+.irm-menucontrol {display:block; width:50px;height:50px; margin:0 auto;cursor:pointer;text-align:center; font-size:2vmin; color:#fff; line-height:50px;background: #ea851d url(menu3bars.png)no-repeat top left; position:fixed}
+.irm-menucontrol > span {position:absolute;left:-9999px;}
+ 
+.right-slide {background:#ea851d;}
+.left-slide {background:#9e6ba9;}
+
+.irm-slide {position:fixed; top:0;height:100vh; width:40vw; transition: 1s; z-index:1000;}
+.irm-slide > span {padding-left:15px;font-weight:600; width:inherit; border-bottom:1px solid #ddd;
+color:rgba(230,230,230,0.8);font: normal 2em/50px  Helvetica, Arial, sans-serif;}
+
+.irm-slide-right {right:-40vw; background:#ea851d;}
+#irm-slide-right:checked ~ .irm-slide-right {right:0;}
+.irm-slide-right span {display:block;height:52px;line-height:52px;margin}
+
+.irm-slide-left {left:-40vw; background:#9e6ba9;}
+#irm-slide-left:checked ~ .irm-slide-left {left:0;}
+.irm-slide-left span {display:block;height:52px;line-height:52px;margin}
+
+.irm-slide-overlay-close {display:block; width:100vw; height:0; position:fixed; left:0; top:0; background:rgba(0,0,0,0.5); transition: left 1s; z-index:100; cursor:pointer;}
+.irm-menu-panel-hidden:checked ~ .irm-slide-overlay-close {height:100vh;}
+
+
+ul.irm-modal-menu {padding:0; margin:0; list-style:none; text-align:left; height:100%;overflow:scroll; overflow-x:hidden;-webkit-overflow-scrolling: touch;}
+ul.irm-modal-menu li a {display:block; height:50px; border-bottom:1px solid #ddd; text-indent:60px; font:normal 20px/50px 'texgyreadventorregular', arial, sans-serif; color:#fff; text-decoration:none;}
+ul.irm-modal-menu li a:hover {color:#0f5; background-color:#663d00}
+ul.irm-modal-menu ul {list-style:none;padding:0px 30px 0px}
+ul.irm-modal-menu ul li a {color:#cff; text-indent:60px;font:normal 18px/50px 'Open Sans', arial, sans-serif;}
+
+
+@media only screen and (max-width:480px) {
+body {font-size:4vmin;}
+.irm-menucall p {font-size:3vmin;}
+h5 {font-size:3vmin;}
+}
