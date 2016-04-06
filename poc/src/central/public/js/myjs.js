@@ -1,0 +1,3 @@
+function alertbox(){
+	alert('hihi');
+}

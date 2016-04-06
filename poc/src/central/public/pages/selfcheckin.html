@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta name="serverAddress" content="SERVERIP">
+	<link href="/public/css/selfcheckin.css" rel='stylesheet' type='text/css' />
+	
+
+</head>
+
+<body>
+	<header>
+	    <div class="inner">        
+	        <img src="/public/image/logo.gif">
+	    </div>
+	</header>
+
+	<h1>Self Check-in System</h1>
+
+	<div id='searchSection' class="input">
+		<h3>Please scan the barcode or type-in the booking number.</h3>
+		<div>
+			Booking No.: <input type='textbox' id='bookingNo'><input type='button' value='search' id='search'>
+		</div>
+	</div>
+
+	<div id="resultSection" class="input">
+	</div>
+
+	<div id="buttonSection" class="input buttonSection">
+	    <input type="button" value="Confirm" id="confirm">
+	    <input type="button" value="Back" id="back">
+    </div>
+
+    <div id="getKeySection" class="input getKeySection">
+    </div>
+
+    <div id="barcodeTarget" class="input"></div>
+
+	<!-- jQuery -->
+    <script src="/public/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/public/js/socket.io.js"></script>
+    <script src="/public/js/selfcheckin.js"></script>
+</body>
+</html>

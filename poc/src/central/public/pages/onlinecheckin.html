@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta name="serverAddress" content="SERVERIP">
+	<link href="/public/css/onlinecheckin.css" rel='stylesheet' type='text/css' />
+	
+
+</head>
+
+<body>
+	<header>
+	    <div class="inner">        
+	        <img src="/public/image/logo.gif">
+	    </div>
+	</header>
+
+	<h1>Online Check-in System</h1>
+
+	<div id='searchSection'>
+		<div class="input">
+			Booking No.: <input type='textbox' id='bookingNo'><input type='button' value='search' id='search'>
+		</div>
+	</div>
+
+	<div id="resultSection" class="input">
+	</div>
+
+	<div id="buttonSection" class="input buttonSection">
+	    <input type="button" value="Save" id="save">
+	    <input type="button" value="Back" id="back">
+    </div>
+
+    <div id="printSection" class="input printSection">
+    	<h3>Thank you for using the Online Check-in process. Please kindly print out this page and get the room key in the front desk.</h3>
+    </div>
+
+    <div id="barcodeTarget" class="input"></div>
+
+	<!-- jQuery -->
+    <script src="/public/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/public/js/jquery-barcode.min.js"></script>
+    <script src="/public/js/socket.io.js"></script>
+    <script src="/public/js/onlinecheckin.js"></script>
+</body>
+</html>
