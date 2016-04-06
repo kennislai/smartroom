@@ -1,0 +1,106 @@
+<!-- Custom Theme JavaScript -->
+<script src="/public/dist/js/sb-admin-2.js"></script>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Hotel Room Management System</a>
+    </div>
+    <!-- /.navbar-header -->
+
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+    </ul>
+    <!-- /.navbar-top-links -->
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li id="menu-dashboard">
+                    <a href="/index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                </li>
+                <li id="menu-roomstate">
+                    <a href="/roomState"><i class="fa fa-home fa-fw"></i> Room</a>
+                </li>
+                <li id="menu-service-configure">
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Service Configure<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li id="menu-courtesyservice-configure">
+                            <a href="#">Courtesy <span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li id="menu-courtesyservice-configure-dnd">
+                                    <a href="/configureCourtesyService?section=dnd">Do Not Disturb</a>
+                                </li>
+                                <li id="menu-courtesyservice-configure-makeuproom">
+                                    <a href="/configureCourtesyService?section=makeuproom">Make-up Room</a>
+                                </li>
+                                <li id="menu-courtesyservice-configure-laundry">
+                                    <a href="/configureCourtesyService?section=laundry">Laundry</a>
+                                </li>
+                                <li id="menu-courtesyservice-configure-bell">
+                                    <a href="/configureCourtesyService?section=bell">Bell Push</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-third-level -->
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+
+                <li id="menu-launch-and-suspend-service">
+                    <a href="/launchAndSuspendService"><i class="fa fa-gears fa-fw"></i> Launch and Suspend Service</a>
+                </li>
+
+                <li id="menu-roomservice">
+                    <a href="/roomServiceMenu"><i class="fa fa-glass fa-fw"></i> Room Service Menu</a>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li id="menu-teatime">
+                    <a href="#"><i class="fa fa-coffee fa-fw"></i> Tea Time Service<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li id="menu-teatime-menu">
+                            <a href="/teaTimeMenu">Tea Time Menu</a>
+                        </li>
+                        <li>
+                            <a href="/teaTimeOrder">Tea Time Order</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="/wakeupcall"><i class="fa fa-phone fa-fw"></i> Wakeup Call</a>
+                </li>
+                <li>
+                    <a href="/selfcheckout"><i class="fa fa-briefcase fa-fw"></i> Self Checkout</a>
+                </li>
+                <li id='menu-weatherinfo'>
+                    <a href="/weatherInfo"><i class="fa fa-cloud fa-fw"></i> Weather Information</a>
+                </li>
+
+                <li id='menu-scene'>
+                    <a href="/roomScene"><i class="fa fa-photo fa-fw"></i> Scene</a>
+                </li>
+
+                <li id='menu-alarm'>
+                    <a href="/alarm"><i class="fa fa-warning fa-fw"></i> Alarm</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+</nav>
